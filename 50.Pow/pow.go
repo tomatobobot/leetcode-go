@@ -18,7 +18,7 @@ func myPow(x float64, n int) float64 {
 		}
 	}
 	for i := 1; i < n; i++ {
-		if res*x > 1<<31-1 {
+		if (res * x) > 1<<31-1 {
 			return 0
 		}
 		res *= x
