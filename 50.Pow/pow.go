@@ -1,11 +1,14 @@
 package Pow
 
 func myPow(x float64, n int) float64 {
-	if x < -100.0 || x > 100.0 || (x == -1 && n%2 == 1) {
+	if x == -1 && n%2 == 1 {
 		return -1
 	}
 	if n == 0 || x == 1.0 || (x == -1 && n%2 == 0) {
 		return 1
+	}
+	if n == 1 {
+		return x
 	}
 	res := x
 	isNeg := false
@@ -26,6 +29,5 @@ func myPow(x float64, n int) float64 {
 	if isNeg {
 		res = 1 / res
 	}
-
 	return res
 }
