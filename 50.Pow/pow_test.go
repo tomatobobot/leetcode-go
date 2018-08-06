@@ -11,4 +11,8 @@ func TestMyPow(t *testing.T) {
 	if res != 0.25 {
 		t.Fatal(res)
 	}
+	res = myPow(2.0, -2147483648)
+	if res != 0 {
+		t.Fatal(res)
+	}
 }
